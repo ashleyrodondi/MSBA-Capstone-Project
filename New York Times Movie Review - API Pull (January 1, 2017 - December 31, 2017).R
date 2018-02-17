@@ -6,7 +6,7 @@
   library(knitr)
 
 # New York Times Development Network API Key
-  NYT_APIKEY = "3bcb75c8465042e18eff19cf103131ef"
+  NYT_APIKEY = "YOUR KEY HERE"
   
 # Pulling New York Times Movie Reviews - Only 20 Entires Are Grabbed Per Pull
   # Results 0-20 reviews 
