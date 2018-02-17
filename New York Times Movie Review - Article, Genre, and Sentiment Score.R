@@ -14,7 +14,7 @@
   library(indicoio)
 
 # indico.io API Key
-  indico.io_APIkey <-"2cf9508e4628b67c9b69ae7d1059efda"
+  indico.io_APIkey <-"YOUR KEY HERE"
 
 #################### New York Times Movie Review - Article, Genre, and Sentiment Score API PULL ####################  
 # Retrieving list of 532 articles curated from the NYT API pull
