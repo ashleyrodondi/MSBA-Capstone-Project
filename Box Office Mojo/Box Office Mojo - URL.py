@@ -1,4 +1,4 @@
-########## NOTE: Make shure you set working directory in the bar above ##########
+########## NOTE: Make sure you set working directory in the bar above ##########
 from bs4 import BeautifulSoup
 import csv
 
