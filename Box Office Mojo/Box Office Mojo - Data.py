@@ -10,16 +10,7 @@ with open("\\Users\\Ashley Rodondi\\Documents\\Spring 2018\\MBA 696 MSBA Capston
     errors = [] 
     
     for idx, movie in enumerate(movie_urls):
-#        if idx < 10:
-#            print(movie)
-        
-#        movie = movie.decode('utf-8')
         movie = movie.strip()
-        
-#        print(movie)
-
-#        if idx % 1000 == 0:
-#            print(idx)
         
         url = ('http://www.boxofficemojo.com' + movie)
 #        print(url)
@@ -37,26 +28,34 @@ with open("\\Users\\Ashley Rodondi\\Documents\\Spring 2018\\MBA 696 MSBA Capston
         # Domestic Total Gross
         domesticTotal = tree.xpath('//*[@id="body"]//font[starts-with(normalize-space(.),"Domestic Total Gross:")]/b/text()')
         print (domesticTotal)
+        
         # Genre
         genre = tree.xpath('//*[@id="body"]//td[starts-with(normalize-space(.),"Genre:")]/b/text()')
         print (genre)
+        
         # Production Budget
         productionBudget = tree.xpath('//*[@id="body"]//td[starts-with(normalize-space(.),"Production Budget:")]/b/text()')
         print (productionBudget)
+        
         # MPAA Rating
         mpaaRating = tree.xpath('//*[@id="body"]//td[starts-with(normalize-space(.),"MPAA Rating:")]/b/text()')
         print (mpaaRating)
+        
         # Distributor
         distributor = tree.xpath('//*[@id="body"]//td[starts-with(normalize-space(.),"Distributor:")]/b/a/text()')
         print (distributor)
+        
         # Release Date
         releaseDate = tree.xpath('//*[@id="body"]//td[starts-with(normalize-space(.),"Release Date:")]/b/nobr/a/text()')
         print (releaseDate)
+        
         # Work around &nbsp; issue
         tree = html.fromstring(page.text.replace("&nbsp;", ""))
+        
         # Foreign Box Office
         foreignBox = tree.xpath('//*[@class="mp_box_content"]//a[starts-with(normalize-space(.),"Foreign:")]/../following-sibling::*[1][name()="td"]/text()')
         print (foreignBox)
+        
         # Opening Weekend
         openingWeekend = tree.xpath('//*[@class="mp_box_content"]//a[starts-with(normalize-space(.),"OpeningWeekend:")]/../following-sibling::*/text()')
         print (openingWeekend)
