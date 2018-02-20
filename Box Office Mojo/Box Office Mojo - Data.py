@@ -67,6 +67,7 @@ with open("\\Users\\Ashley Rodondi\\Documents\\Spring 2018\\MBA 696 MSBA Capston
         # Close Date
         closeDate = tree.xpath('//*[@class="mp_box_content"]//td[starts-with(normalize-space(.),"CloseDate:")]/following-sibling::*/text()')
         print (closeDate)
+        
         # In Release
         inRelease = tree.xpath('//*[@class="mp_box_content"]//td[starts-with(normalize-space(.),"In Release:")]/following-sibling::*/text()')
         print (inRelease)
